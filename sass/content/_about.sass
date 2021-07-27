@@ -1,0 +1,35 @@
+.about
+  display: flex
+  align-items: center
+  &__inner
+    max-width: 556px
+    +adaptiv-value("max-width", $mw_about, $mw_about_mob, 2)
+    margin: 0 auto
+  &__text
+    text-align: center
+    +adaptiv-value("padding-left", $pl_aboutText, $pl_aboutText_mob, 2)
+    +adaptiv-value("padding-right", $pl_aboutText, $pl_aboutText_mob, 2)
+
+.divider
+  +adaptiv-value("margin-top", $mt_divider, $mt_divider_mob, 2)
+  +adaptiv-value("margin-bottom", $mt_divider, $mt_divider_mob, 2)
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &:before, &:after
+    content: ""
+    width: 100px
+    height: 0.5px
+    background-color: #FFFFFF
+    flex-grow: 1
+
+  &__ic
+    display: inline-block
+    width: 5px
+    height: 5px
+    background-color: #FFFFFF
+    transform: rotate(45deg)
+    +adaptiv-value("margin-left", $ml_dividerIc, $ml_dividerIc_mob, 2)
+    +adaptiv-value("margin-right", $ml_dividerIc, $ml_dividerIc_mob, 2)

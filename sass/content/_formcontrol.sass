@@ -1,0 +1,46 @@
+.btn
+  position: relative
+  font-family: $ff_body
+  +adaptiv-value("font-size", $fs_field, $fs_field_mob, 2)
+  line-height: $lh_body
+  text-decoration: none
+  background-color: #C2C0C0
+  text-align: center
+  color: #000000
+  border: 0
+  cursor: pointer
+  user-select: none
+  width: 100%
+  border-radius: 5px
+  padding: 5px
+
+/*FORM*/
+
+.form-field
+  width: 100%
+  background: transparent
+  border-radius: 5px
+  +adaptiv-value("font-size", $fs_field, $fs_field_mob, 2)
+  line-height: $lh_body
+  padding: 8px 10px
+  border: 0.5px solid #FFFFFF
+  color: $fc_body
+
+.field-label
+  display: inline-block
+  +adaptiv-value("margin-bottom", $mb_fieldLabel, $mb_fieldLabel_mob, 2)
+  +adaptiv-value("font-size", $fs_fieldLabel, $fs_fieldLabel_mob, 2)
+
+.field-group
+  +adaptiv-value("margin-bottom", $mb_fieldGroup, $mb_fieldGroup_mob, 2)
+  width: 100%
+
+.row
+  display: flex
+  column-gap: 20px
+  +phone-down
+    flex-direction: column
+
+
+.form-field-msg
+  min-height: 75px

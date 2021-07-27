@@ -1,0 +1,70 @@
+/* TABS */
+.tabs 
+  display: flex
+  flex-wrap: wrap
+  +tablet-down
+    flex-direction: column
+
+  &--col
+    flex-direction: column
+
+.tabs__label
+  display: inline-block
+  color: $fc_body
+  +adaptiv-value('font-size', $fs_body, $fs_body, 1)
+  +adaptiv-value('padding-top', 8, 8, 1)
+  +adaptiv-value('padding-bottom', 8, 8, 1)
+  +adaptiv-value('padding-left', 20, 10, 1)
+  +adaptiv-value('padding-right', 20, 10, 1)
+  +adaptiv-value('min-width', 190, 100, 1)
+  text-align: center
+  cursor: pointer
+
+  &:last-child, &.last
+    +tablet-down
+      border-bottom-width: 0
+
+.tabs__checkbox
+  display: none
+
+.tabs__content 
+  order: 1
+  width: 100%
+  //display: none
+  opacity: 0
+  height: 0
+  transition: opacity 0.3s ease-in-out
+  +adaptiv-value('padding-top', 30, 15, 1)
+  +adaptiv-value('padding-bottom', 100, 50, 1)
+  +adaptiv-value('padding-left', 10, 5, 1)
+  +adaptiv-value('padding-right', 10, 5, 1)
+
+  +tablet-down
+    order: 0
+
+  ul
+    +adaptiv-value('margin-left', 20, 10, 1)
+    +adaptiv-value('margin-bottom', 40, 20, 1)
+    &>li
+      +adaptiv-value('margin-bottom', 10, 5, 1)
+      &:hover
+        opacity: 0.8
+
+  &-text
+    +adaptiv-value('margin-bottom', 10, 5, 1)
+
+.tabs__checkbox:checked + .tabs__label
+  color: $fc_body
+  border-bottom-color: transparent
+  +tablet-down
+    border: none
+
+.tabs--col
+  .tabs__content
+    order: unset
+
+.tabs__checkbox:checked + .tabs__label + .tabs__content
+  //display: initial
+  height: auto
+  opacity: 1
+

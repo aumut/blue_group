@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blue group - Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="logo">
+                <img src="images/img/logo.svg" alt="BLU">
+                <span>group</span>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item"><a href="index.html" class="menu__link">About us</a></li>
+                    <li class="menu__list-item active"><a href="portfolio.html" class="menu__link">Portfolio</a></li>
+                    <li class="menu__list-item"><a href="projects.html" class="menu__link">Projects</a></li>
+                    <li class="menu__list-item"><a href="contacts.html" class="menu__link">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="portfolio bl">
+    <div class="container">
+        <div class="portfolio__inner">
+            <div class="portfolio-side portfolio-side--left">
+                <div class="tabs tabs--col">
+                    <input type="checkbox" class="tabs__checkbox"  id="tab1">
+                    <label for="tab1" class="tabs__label">WordPress projects:</label>
+                    <div class="tabs__content">
+                        <ul class="portfolio-list">
+                            <li><a href="#">Project  dapp.expert</a></li>
+                            <li><a href="#">Project  stroyhome</a></li>
+                            <li><a href="#">Project  novatex</a></li>
+                            <li><a href="#">Project  kindergarden</a></li>
+                        </ul>
+                    </div>
+
+                    <input type="checkbox" class="tabs__checkbox"  id="tab2">
+                    <label for="tab2" class="tabs__label">Bitrix CMS projects:</label>
+                    <div class="tabs__content">
+                        <ul class="portfolio-list">
+                            <li><a href="#">Project  zlatar.kz</a></li>
+                            <li><a href="#">Project  8times</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="portfolio-slider">
+                <img src="images/content/slider1.jpg" alt="">
+            </div>
+            <div class="portfolio-side portfolio-side--right">
+                <h3 class="project-name">Project dapp.expert</h3>
+                <ul class="portfolio-list">
+                    <li><a href="#">Frontend (html/css, JS),</a></li>
+                    <li><a href="#">Fix of WordPress issues,</a></li>
+                </ul>
+                <h4 class="project-descr-title">Description:</h4>
+                <div class="project-descr">
+                    Реализация новой верстки уже работающего сайта с использованием препроцессора Sass, БЭМ, JavaScript, lazyload и bootstrap grid;
+                    Pixel Perfect верстка, использованы GIT;
+                    Исправление php-кода для корректной работы ajax-запросов;
+                </div>
+                <div class="project-link">Reference:
+                    <a href="#">dapp.expert</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div>Copyright © 2021 BLU-GROUP </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

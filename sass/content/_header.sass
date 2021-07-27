@@ -1,0 +1,53 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +adaptiv-value("margin-top", $mt_header, $mt_header_mob, 2)
+  .logo
+    +adaptiv-value("margin-bottom", $mb_logo, $mb_logo_mob, 2)
+
+.logo
+  display: flex
+  flex-direction: column
+  +adaptiv-value("padding-top", $pt_logo, $pt_logo_mob, 2)
+  +adaptiv-value("padding-bottom", $pt_logo, $pt_logo_mob, 2)
+  +adaptiv-value("padding-left", $pl_logo, $pl_logo_mob, 2)
+  +adaptiv-value("padding-right", $pl_logo, $pl_logo_mob, 2)
+  +adaptiv-value("width", $w_logo, $w_logo_mob, 2)
+  +adaptiv-value("height", $h_logo, $h_logo_mob, 2)
+  border: 1px solid $fc_body
+  align-self: center
+  img
+    display: inline-block
+    width: 100%
+    height: auto
+
+.menu
+  &__list
+    display: flex
+    justify-content: space-between
+    +adaptiv-value("max-width", $mw_menu, $mw_menu_mob, 2)
+    margin: 0 auto
+    &-item
+      +adaptiv-value("padding-top", $pt_menuItem, $pt_menuItem_mob, 2)
+      +adaptiv-value("padding-bottom", $pt_menuItem, $pt_menuItem_mob, 2)
+      +adaptiv-value("padding-left", $pl_menuItem, $pl_menuItem_mob, 2)
+      +adaptiv-value("padding-right", $pl_menuItem, $pl_menuItem_mob, 2)
+      border-bottom: 1px solid transparent
+      transition: border-bottom-color 0.2s ease-in-out
+      &:hover, &:active, &.active
+        border-bottom-color: $fc_body
+
+  &__link
+    color: $fc_body
+    display: flex
+    +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
+
+
+

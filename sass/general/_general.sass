@@ -1,0 +1,62 @@
+/* GENERAL */
+*
+  box-sizing: border-box
+  &:focus, &:active
+    outline: none !important
+
+@viewport
+  width: device-width
+
+html
+  scroll-behavior: smooth
+
+
+body
+  font:
+    family: $ff_body
+    weight: 400
+  +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
+  color: $fc_body
+  line-height: $lh_body
+  min-width: $phone-width-min
+  margin: 0
+  padding: 0
+  height: 100vh
+  background-color: $bg_body
+  position: relative
+
+  &.lock
+    overflow: hidden
+
+h1, h2, h3, h4, h5, h6, p, ul, ol
+  margin: 0
+  padding: 0
+
+h1
+  +adaptiv-value("font-size", $fs_h1, $fs_h1_mob, 2)
+  line-height: $lh_h1
+  font-weight: normal
+  text-transform: uppercase
+
+h3, h4
+  +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
+  line-height: $lh_body
+  font-weight: normal
+
+a
+  text-decoration: none
+
+ul
+  list-style: none
+
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  +adaptiv-value("padding-left", $pl_container, $pl_container_mob, 2)
+  +adaptiv-value("padding-right", $pl_container, $pl_container_mob, 2)
+  position: static
+
+
+.bl
+  height: 100vh

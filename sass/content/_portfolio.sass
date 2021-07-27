@@ -1,0 +1,97 @@
+.portfolio
+  display: flex
+  align-items: center
+  justify-content: center
+  +adaptiv-value("font-size", $fs_portf, $fs_portf_mob, 2)
+  &__inner
+    display: grid
+    grid-template-columns: 1fr 2fr 1fr
+    +tablet-down
+      display: flex
+      flex-direction: column
+  &-side
+    +adaptiv-value("padding-left", $pl_portfolio_side, $pl_portfolio_side_mob, 2)
+    +adaptiv-value("padding-right", $pl_portfolio_side, $pl_portfolio_side_mob, 2)
+    +adaptiv-value("padding-top", $pt_portfolio_side, $pt_portfolio_side_mob, 2)
+    &--left
+      border-right: 1px solid $fc_body
+      +tablet-down
+        border-right: none
+        border-bottom: 1px solid $fc_body
+    &--right
+      border-left: 1px solid $fc_body
+      +tablet-down
+        border-left: none
+        border-top: 1px solid $fc_body
+  &-slider
+    +adaptiv-value("min-width", $mw_portfolio_img, $mw_portfolio_img_mob, 2)
+    +adaptiv-value("padding-top", $pt_portfolio_slider, $pt_portfolio_slider_mob, 2)
+    +adaptiv-value("padding-bottom", $pt_portfolio_slider, $pt_portfolio_slider_mob, 2)
+    +adaptiv-value("padding-left", $pl_portfolio_slider, $pl_portfolio_slider_mob, 2)
+    +adaptiv-value("padding-right", $pl_portfolio_slider, $pl_portfolio_slider_mob, 2)
+    img
+      width: 100%
+      height: auto
+
+  &-list
+    display: flex
+    flex-direction: column
+    li
+      a
+        display: flex
+        align-items: center
+        color: $fc_body
+        &::before
+          content: ""
+          display: inline-block
+          width: 3px
+          height: 3px
+          background-color: $fc_body
+          border-radius: 50%
+          margin-right: 10px
+          margin-left: 10px
+
+  .tabs__content
+    padding: 0
+    display: block
+    ul
+      +adaptiv-value('margin-left', 0, 0, 1)
+      +adaptiv-value('margin-bottom', $mb_tabsContent, $mb_tabsContent_mob, 1)
+
+  //.tabs__checkbox:checked + .tabs__label + .tabs__content
+    display: none
+
+  .tabs__label
+    padding: 0
+    margin-bottom: 10px
+    padding-right: 10px
+    position: relative
+    text-align: left
+
+    &::after
+      content: ""
+      width: 12px
+      height: 12px
+      display: inline-block
+      position: absolute
+      top: 50%
+      right: 0
+      background:
+        color: transparent
+        image: url("../images/img/arrow.svg")
+        repeat: no-repeat
+        size: cover
+        position: center
+
+  .tabs__checkbox:checked + .tabs__label
+    +adaptiv-value("margin-bottom", $mb_tabsLabel, $mb_tabsLabel_mob, 2)
+    &::after
+      transform: scaleY(-1)
+      margin-top: calc(-12px / 2)
+
+  .project-link > a
+    color: $fc_body
+    text-decoration: underline
+
+  .project-name, .portfolio-list, .project-descr-title, .project-descr
+    +adaptiv-value("margin-bottom", $mb_portf, $mb_portf_mob, 2)
